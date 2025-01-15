@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Города мира</title>
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		.find{
+			display: grid;
+			width:100%;
+			height:2%;
+			padding-top: 3px;
+			padding-bottom: 3px;
+			grid-template-columns: 45% 52% auto;
+			grid-template-rows: 1fr;
+			background-color: gray;
+			grid-template-areas:
+				"void header loop";
+		}
+		.find > div{
+			text-align: center;
+			background-color: gray;
+		}
+		.find > .item-header{
+			grid-area: header;
+		}
+		.find > .item-loop{
+			grid-area: loop;
+		}
+		input{
+			width: 100%;
+		}
+	
+	
+		.menu{
+			display: grid;
+			width:100%;
+			height:20%;
+			grid-template-columns: repeat(4, 15%);
+			grid-template-rows: repeat(3, 1fr);
+			justify-content: center;
+			color: white;
+			background-image: url("images/goroda.jpg");
+			background-position: center;
+			background-size: cover;
+			grid-template-areas:
+				"menu1 menu2 menu3 menu4"
+				"decoy1 decoy1 decoy1 decoy1"
+				"decoy2 name name decoy3";
+		}
+		.menu > div{
+			text-align: center;
+			align-content: center;
+		}
+	
+		.menu > .item-menu1{grid-area: menu1; color: red;}
+		.menu > .item-menu2{grid-area: menu2;}
+		.menu > .item-menu3{grid-area: menu3;}
+		.menu > .item-menu4{grid-area: menu4;}
+		.menu > .item-decoy1{grid-area: decoy1;}
+		.menu > .item-decoy2{grid-area: decoy2;}
+		.menu > .item-decoy3{grid-area: decoy3;}
+		.menu > .item-name{grid-area: name;}
+	
+		.main{
+			display: grid;
+			width:100%;
+			height:75%;
+			grid-template-columns: 55% 25%;
+			grid-template-rows: repeat(3, 1fr);
+			justify-content: center;
+			/* border: solid green 1px; */
+			grid-gap: 1vw;
+			grid-template-areas:
+					"b1 m1"
+					"b2 m2"
+					"b3 m3";
+		}
+		.main > div{
+			text-align: center;
+			/* border: solid red 1px; */
+		}
+		.main > div > h3 > img{
+			width: 100%;
+			height: 100px;
+			align-items:start;
+			object-fit: cover;
+			/* margin-top: 4%; */
+		}
+		.main > div > h4 > img{
+			width: 50%;
+			height: 100px;
+			align-items:start;
+			object-fit: cover;
+			float: left;
+			/* margin-top: 4%; */
+		}
+
+		.main > div > h3{
+			color: white;
+		}
+		.main > div > h4{
+			color: white;
+		}
+
+		.main > .item-m1 p,
+		.main > .item-m2 p,
+		.main > .item-m3 p {
+			margin: 0;
+			text-align: justify; /* Выравнивание текста для красоты */
+			clear: left; /* Текст начинается под изображением */
+			line-height: 1.5; /* Межстрочный интервал */
+	}
+		.main > .item-b1{grid-area: b1;}
+		.main > .item-b2{grid-area: b2;}
+		.main > .item-b3{grid-area: b3;}
+		.main > .item-m1{grid-area: m1;}
+		.main > .item-m2{grid-area: m2;}
+		.main > .item-m3{grid-area: m3;}
+	
+		.end{
+			width: 100%;
+			height: 4%;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr;
+		}
+	
+		.end{
+			display:grid;
+			align-content: end;
+			width:100%;
+			grid-template-columns: 90% 10%;
+		}
+	
+		@media (max-width: 1200px) {
+	
+			.menu {
+				display: none;
+			}
+	
+			.menu > .item-decoy1,
+			.menu > .item-decoy2,
+			.menu > .item-decoy3,
+			.menu > .item-name {
+				display: none;
+			}
+	
+			.main {
+				/* border: solid green 1px; */
+				display: grid;
+				grid-template-columns: 1fr;
+				grid-template-rows: auto;
+				grid-template-areas:
+					"b1"
+					"m1"
+					"b2"
+					"m2"
+					"b3"
+					"m3";
+				height: auto;
+			}
+	
+			.main > div {
+				text-align: center;
+				width: 100%;
+			}
+		}
+	
+	</style>
+</head>
+<body>
+	<div class="find">
+		<div class="void"></div>
+		<div class="item-header">
+		<form>
+			<label>
+			  <input type="text" name="username" id="username">
+			</label>
+		  </form>
+		</div>
+		<div class="item-loop">
+			🔍
+		</div>
+	</div>
+	
+	<div class="menu">
+		<div class="item-menu1">Меню_1</div>
+		<div class="item-menu2">Меню_2</div>
+		<div class="item-menu3">Меню_3</div>
+		<div class="item-menu4">Меню_4</div>
+		<div class="item-decoy1"></div>
+		<div class="item-decoy2"></div>
+		<div class="item-decoy3"></div>
+		<div class="item-name">Города мира</div>
+	</div>
+
+	<div class="main">
+		<div class="item-b1">
+			<h3><img src="images/VDK.jpg" alt=""></h3>
+			<p><b>Владивосток</b></p>
+			Крупный город и порт на юге Дальнего Востока России. Политический, культурный,
+			 научно-образовательный и экономический центр региона. Административный центр Приморского края,
+			 Владивостокского городского округа, а также с 13 декабря 2018 года центр Дальневосточного федерального округа. 
+		</div>
+		<div class="item-b2">
+			<h3><img src="images/Tokyo.png" alt=""></h3>
+			<p><b>Эрмуполис</b></p>
+			Город на восточной стороне греческого острова Сирос, 
+				административный центр общины Сирос-Эрмуполис и периферии 
+				Южных Эгейских островов.
+		</div>
+		<div class="item-b3">
+			<h3><img src="images/New.jpg" alt=""></h3>
+			<p><b>Нью-Йорк</b></p>
+			Крупнейший город США, входящий в одну из крупнейших агломераций мира.
+			Расположен на берегу Атлантического океана в юго-восточной части штата Нью-Йорк.
+		</div>
+		<div class="item-m1">
+			<h4><img class=".main-img1" src="images/gon.jpg" alt=""></h4>
+			<b>Гонконг</b>
+			<p>Cпециальный административный район Китайской Народной Республики,
+			 один из ведущих глобальных городов и финансовых центров мира. 
+			</p>
+		</div>
+		<div class="item-m2">
+			<h4><img class=".main-img1" src="images/il.jpg" alt=""></h4>
+			<b>Иерусалим</b>
+			<p>Город на Ближнем Востоке, столица Израиля и де-юре столица Государства Палестина.
+			Расположен на плато в Иудейских горах на водоразделе между Средиземным и Мёртвым морями,
+			на высоте 650–840 метров над уровнем моря. 
+			</p>
+		</div>
+		<div class="item-m3">
+			<h4><img class=".main-img1" src="images/lon.jpg" alt=""></h4>
+			<b>Лондон</b>
+			<p>Cтолица и крупнейший город Англии и Великобритании.
+			Расположен на юго-востоке острова Великобритания, на равнине в устье Темзы,
+			вблизи Северного моря. 
+			</p>
+		</div>
+	</div>
+
+	<hr>
+
+	<div class="end">
+		<div>Матуленко В. А., Б9122-09.03.04(3), 2024-2025</div>
+		<div>Контакты</div>
+	</div>
+</body>
+</html>
