@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Лабораторная работа Bootstrap</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    .hidden-md-down {
+        display: none !important;
+    }
+
+    @media (min-width: 1200px) {
+        .hidden-md-down {
+            display: block !important;
+        }
+    }
+    </style>
+</head>
+<!-- p-1 m-1 justify-content-center -->
+
+<body>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 p-1 d-xl-flex flex-row-reverse bg-light">
+            <img src="img/Python.png" alt="Python" class="d-flex img-fluid img-thumbnail col-xl-6 col-sm-12 col-12">
+            <p class=""><span class="text-primary fw-bold">Python</span> <br class="d-xl-none"> 
+                создан в 1989–1991 годах голландским программистом Гвидо ван Россумом
+            </p>
+        </div>
+
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 p-1 bg-light d-xl-flex d-lg-inline ">
+            <img src="img/Ruby.png" alt="Ruby" class="d-flex img-fluid img-thumbnail me-3 col-xl-6 col-sm-12 col-12">
+            <p><span class="text-primary fw-bold">Ruby</span> <br class="d-xl-none"> 
+                разработан в 1993-1995 годах, автор - японский программист Юкихиро Мацумото
+            </p>
+        </div>
+    </div>
+
+    <!-- <div class="row justify-content-center d-xl-none">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 d-xl-flex flex-row-reverse bg-light">
+            <img src="img/Python.png" alt="Python" class="d-flex img-fluid img-thumbnail col-xl-6 col-sm-12 col-12">
+            <p class=""><span class="text-primary fw-bold">Python</span> <br class="d-xl-none"> 
+                создан в 1989–1991 годах голландским программистом Гвидо ван Россумом
+            </p>
+        </div>
+    
+        <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 bg-light d-xl-flex d-lg-inline ">
+            <img src="img/Ruby.png" alt="Ruby" class="d-flex img-fluid img-thumbnail me-3 col-sm-12 col-xl-6 col-12">
+            <p><span class="text-primary fw-bold">Ruby</span> <br class="d-xl-none"> 
+                разработан в 1993-1995 годах, автор - японский программист Юкихиро Мацумото
+            </p>
+        </div>
+    </div> -->
+
+    <div class="row justify-content-center">
+        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 p-1 d-xl-flex flex-row-reverse bg-light">
+            <img src="img/Javascript.png" alt="JavaScript" class="d-flex img-fluid img-thumbnail col-xl-6 col-sm-12 col-12">
+            <p class=""><span class="text-primary fw-bold ">JavaScript</span> <br>
+                разработан в 1996 году, автор - американский программист Брендан Айк
+            </p>
+        </div>
+
+        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 p-1 bg-light d-xl-flex d-lg-inline ">
+            <img src="img/С.png" alt="C" class="d-flex img-fluid img-thumbnail me-3 col-xl-6 col-sm-12 col-12">
+            <p><span class="text-primary fw-bold">C</span> <br> 
+                разработан в 1969–1973 годах сотрудником Bell Labs Деннисом Ритчи
+            </p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 p-1 d-xl-flex flex-row-reverse bg-light ">
+            <img src="img/Java.png" alt="Java" class="d-flex img-fluid img-thumbnail col-xl-6 col-sm-12 col-12">
+
+            <p class="align-self-center"><span class="text-primary fw-bold d-xl-none">Java</span><br class="d-xl-none"> 
+                разработан в 1990–1996 годах канадским программистом Джеймсом Гослингом
+            </p>
+            <p class="align-self-center text-primary fw-bold float-xl-start margin-right m-4 hidden-md-down">
+                Java
+            </p>
+        </div>
+
+        <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 p-1 bg-light d-xl-flex d-lg-inline">
+            <img src="img/Prolog.png" alt="Prolog" class="d-flex img-fluid img-thumbnail me-3 col-xl-6 col-sm-12 col-12">
+            <p class="align-self-center"><span class="text-primary fw-bold d-xl-none">Prolog</span><br class="d-xl-none"> 
+                разработан в 1972 году, автор - французский программист Ален Колмероэ
+            </p>
+            <p class="align-self-center text-primary fw-bold float-xl-end m-3 hidden-md-down">
+                Prolog
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
